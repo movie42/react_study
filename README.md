@@ -82,3 +82,6 @@ basic document [https://ko.reactjs.org/docs/getting-started.html]
 
    unmounting
    link : [https://ko.reactjs.org/docs/react-component.html#unmounting]
+
+6. Conclusion of life cycle.
+   If I need change data, like API, I fetch data in ComponentDidMount() because ComponentDidMount excution after render.
