@@ -33,3 +33,6 @@
 
 7. I Can send information other component.
    I can create property from father component and send to child component.
+
+   > Warning : Each child in a list should have a unique "key" prop.
+   > How Can I Fix it? It jUst add key prop inside each Component.

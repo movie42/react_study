@@ -10,18 +10,9 @@ function Information({ name, picture }) {
 }
 
 const arrayObject = [
-  {
-    name: "JO",
-    picture: "JOIMAGE",
-  },
-  {
-    name: "KO",
-    picture: "KOIMAGE",
-  },
-  {
-    name: "CHIO",
-    picture: "CHIOIMAGE",
-  },
+  { id: 1, name: "JO", picture: "JOIMAGE" },
+  { id: 2, name: "KO", picture: "KOIMAGE" },
+  { id: 3, name: "CHIO", picture: "CHIOIMAGE" },
 ];
 
 function App() {
@@ -29,7 +20,7 @@ function App() {
     <div className="App">
       <h1>Study React</h1>
       {arrayObject.map((value) => (
-        <Information name={value.name} picture={value.picture} />
+        <Information key={value.id} name={value.name} picture={value.picture} />
       ))}
     </div>
   );
