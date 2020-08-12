@@ -1,6 +1,8 @@
-## Study react basic
+# Study react basic
 
     lecture : nomadcoder
+
+## SETTINGS
 
 1. What is this?
 
@@ -13,6 +15,8 @@
 
 3. How can I start react app
    open terminal and "yarn start"
+
+## COMPONENT AND JSX
 
 4. How does React work?
    ReactDOM make viture DOM inside index.html.
@@ -36,3 +40,9 @@
 
    > Warning : Each child in a list should have a unique "key" prop.
    > How Can I Fix it? It jUst add key prop inside each Component.
+
+8. Check PropTypes
+   Why need I this?
+   [https://ko.reactjs.org/docs/typechecking-with-proptypes.html]
+
+## STATE
