@@ -1,18 +1,36 @@
 import React from "react";
 
-function Information({ name, what, list }) {
+function Information({ name, picture }) {
   return (
-    <p>
-      this is props {name}, {list}
-    </p>
+    <div>
+      <p>This is {name}</p>
+      <p>this is Image {picture}</p>
+    </div>
   );
 }
+
+const arrayObject = [
+  {
+    name: "JO",
+    picture: "JOIMAGE",
+  },
+  {
+    name: "KO",
+    picture: "KOIMAGE",
+  },
+  {
+    name: "CHIO",
+    picture: "CHIOIMAGE",
+  },
+];
 
 function App() {
   return (
     <div className="App">
       <h1>Study React</h1>
-      <Information name="something" what={true} list={[1, 2, 3, 4]} />
+      {arrayObject.map((value) => (
+        <Information name={value.name} picture={value.picture} />
+      ))}
     </div>
   );
 }
