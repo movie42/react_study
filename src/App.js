@@ -1,42 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Information({ name, picture, age }) {
-  return (
-    <div>
-      <p>This is {name}</p>
-      <p>I am {age}</p>
-      <p>this is Image {picture}</p>
-    </div>
-  );
-}
+class App extends React.Component {
+  // The Reason I use state, because the data is change.
+  state = {
+    count: 0,
+  };
 
-const arrayObject = [
-  { id: 1, name: "JO", picture: "JOIMAGE", age: 32 },
-  { id: 2, name: "KO", picture: "KOIMAGE", age: 32 },
-  { id: 3, name: "CHIO", picture: "CHIOIMAGE", age: 33 },
-];
+  add = () => {
+    console.log("add");
+  };
+  minus = () => {
+    console.log("minus");
+  };
 
-Information.propTypes = {
-  name: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
-};
-
-function App() {
-  return (
-    <div className="App">
-      <h1>Study React</h1>
-      {arrayObject.map((value) => (
-        <Information
-          key={value.id}
-          name={value.name}
-          picture={value.picture}
-          age={value.age}
-        />
-      ))}
-    </div>
-  );
+  // this is not a function so it has render()
+  render() {
+    return (
+      <div>
+        <h1>change Data : {this.state.count} </h1>
+        <button onClick={this.add}>+</button>
+        <button onClick={this.minus}>-</button>
+      </div>
+    );
+  }
 }
 
 export default App;

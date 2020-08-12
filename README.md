@@ -1,6 +1,10 @@
 # Study react basic
 
-    lecture : nomadcoder
+intro: This document just record my React review.
+
+lecture : nomadcoder [https://nomadcoders.co/]
+
+basic document [https://ko.reactjs.org/docs/getting-started.html]
 
 ## SETTINGS
 
@@ -45,4 +49,20 @@
    Why need I this?
    [https://ko.reactjs.org/docs/typechecking-with-proptypes.html]
 
+   I need install npm install prop-types.
+
+   Check PropTypes is check what I wrote props right or worng.
+
 ## STATE
+
+1. Basic THeory : When State create writing dynamic data.
+   [https://ko.reactjs.org/docs/lifting-state-up.html#gatsby-focus-wrapper]
+
+2. class
+   It is javascript theory...
+   [https://ko.javascript.info/class]
+
+   so, I can made class react component
+   React component automatically is going to work render method
+
+   > so Why need I class react component? Because, I NEED STATE.
