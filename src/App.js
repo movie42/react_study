@@ -8,10 +8,15 @@ class App extends React.Component {
   };
 
   add = () => {
-    console.log("add");
+    // I can't mutate state directly. So I use setState.
+    this.setState((current) => ({
+      count: current.count + 1,
+    }));
   };
   minus = () => {
-    console.log("minus");
+    this.setState((current) => ({
+      count: current.count - 1,
+    }));
   };
 
   // this is not a function so it has render()

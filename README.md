@@ -66,3 +66,8 @@ basic document [https://ko.reactjs.org/docs/getting-started.html]
    React component automatically is going to work render method
 
    > so Why need I class react component? Because, I NEED STATE.
+
+3. State is Object.
+
+4. I can't mutate state directly.
+   I can use this.setState({})
