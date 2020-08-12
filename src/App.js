@@ -2,6 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log("WOW");
+  }
+
   // The Reason I use state, because the data is change.
   state = {
     count: 0,
@@ -19,8 +24,15 @@ class App extends React.Component {
     }));
   };
 
+  componentDidMount() {
+    console.log("Component render");
+  }
+  componentDidUpdate() {
+    console.log("update");
+  }
   // this is not a function so it has render()
   render() {
+    console.log("render");
     return (
       <div>
         <h1>change Data : {this.state.count} </h1>

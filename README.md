@@ -47,7 +47,7 @@ basic document [https://ko.reactjs.org/docs/getting-started.html]
 
 8. Check PropTypes
    Why need I this?
-   [https://ko.reactjs.org/docs/typechecking-with-proptypes.html]
+   link : [https://ko.reactjs.org/docs/typechecking-with-proptypes.html]
 
    I need install npm install prop-types.
 
@@ -56,11 +56,11 @@ basic document [https://ko.reactjs.org/docs/getting-started.html]
 ## STATE
 
 1. Basic THeory : When State create writing dynamic data.
-   [https://ko.reactjs.org/docs/lifting-state-up.html#gatsby-focus-wrapper]
+   link : [https://ko.reactjs.org/docs/lifting-state-up.html#gatsby-focus-wrapper]
 
 2. class
    It is javascript theory...
-   [https://ko.javascript.info/class]
+   link : [https://ko.javascript.info/class]
 
    so, I can made class react component
    React component automatically is going to work render method
@@ -71,3 +71,14 @@ basic document [https://ko.reactjs.org/docs/getting-started.html]
 
 4. I can't mutate state directly.
    I can use this.setState({})
+   link : [https://ko.reactjs.org/docs/state-and-lifecycle.html#using-state-correctly]
+
+5. Component Life cycle
+   mounting
+   link : [https://ko.reactjs.org/docs/react-component.html#mounting]
+
+   updating
+   link : [https://ko.reactjs.org/docs/react-component.html#updating]
+
+   unmounting
+   link : [https://ko.reactjs.org/docs/react-component.html#unmounting]
