@@ -1,87 +1,12 @@
-# Study react basic
+# 틱텍토
 
-intro: This document just record my React review.
+> 2020.10.27 화요일 [React 자습서](https://ko.reactjs.org/tutorial/tutorial.html#before-we-start-the-tutorial)를 바탕으로 기본 구현
 
-lecture : nomadcoder [https://nomadcoders.co/]
+## 챌린지
 
-basic document [https://ko.reactjs.org/docs/getting-started.html]
-
-## SETTINGS
-
-1. What is this?
-
-   It just make movie_app. At the same time, I study React Js.
-
-2. Review setting
-
-1) install npx react-create-app (name)
-2) create git repository
-
-3. How can I start react app
-   open terminal and "yarn start"
-
-## COMPONENT AND JSX
-
-4. How does React work?
-   ReactDOM make viture DOM inside index.html.
-
-5. what is component?
-   It is function return HTML.
-
-   > JSX : I need react write like html to use component. other words it just JS + HTML
-
-6. How do I make and use Component
-   Create JavaScript file.
-   And write on top line I should write 'import React from "react"'
-   React understand JSX that read 'import React from "react"' on JS File.
-   Component name of first letter should write UpperCase.
-   If you want use your component, you must export your Component.
-
-   > Caution : React application just RENDER ONLY ONE COMPONENT.
-
-7. I Can send information other component.
-   I can create property from father component and send to child component.
-
-   > Warning : Each child in a list should have a unique "key" prop.
-   > How Can I Fix it? It jUst add key prop inside each Component.
-
-8. Check PropTypes
-   Why need I this?
-   link : [https://ko.reactjs.org/docs/typechecking-with-proptypes.html]
-
-   I need install npm install prop-types.
-
-   Check PropTypes is check what I wrote props right or worng.
-
-## STATE
-
-1. Basic THeory : When State create writing dynamic data.
-   link : [https://ko.reactjs.org/docs/lifting-state-up.html#gatsby-focus-wrapper]
-
-2. class
-   It is javascript theory...
-   link : [https://ko.javascript.info/class]
-
-   so, I can made class react component
-   React component automatically is going to work render method
-
-   > so Why need I class react component? Because, I NEED STATE.
-
-3. State is Object.
-
-4. I can't mutate state directly.
-   I can use this.setState({})
-   link : [https://ko.reactjs.org/docs/state-and-lifecycle.html#using-state-correctly]
-
-5. Component Life cycle
-   mounting
-   link : [https://ko.reactjs.org/docs/react-component.html#mounting]
-
-   updating
-   link : [https://ko.reactjs.org/docs/react-component.html#updating]
-
-   unmounting
-   link : [https://ko.reactjs.org/docs/react-component.html#unmounting]
-
-6. Conclusion of life cycle.
-   If I need change data, like API, I fetch data in ComponentDidMount() because ComponentDidMount excution after render.
+- [ ] 이동 기록 목록에서 특정 형식(행, 열)으로 각 이동의 위치를 표시해주세요.
+- [ ] 이동 목록에서 현재 선택된 아이템을 굵게 표시해주세요.
+- [ ] 사각형들을 만들 때 하드코딩 대신에 두 개의 반복문을 사용하도록 Board를 다시 작성해주세요.
+- [ ] 오름차순이나 내림차순으로 이동을 정렬하도록 토글 버튼을 추가해주세요.
+- [ ] 승자가 정해지면 승부의 원인이 된 세 개의 사각형을 강조해주세요.
+- [ ] 승자가 없는 경우 무승부라는 메시지를 표시해주세요.
