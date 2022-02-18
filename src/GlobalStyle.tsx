@@ -52,6 +52,7 @@ const GolbalStyle = createGlobalStyle`
     }
     a{
         text-decoration:none;
+        color:inherit;
     }
 `
 
