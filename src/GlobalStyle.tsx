@@ -1,6 +1,7 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GolbalStyle = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;900&display=swap');
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -26,8 +27,13 @@ const GolbalStyle = createGlobalStyle`
     footer, header, hgroup, menu, nav, section {
         display: block;
     }
+    html {
+        font-size:10px;
+        font-family: "Noto Sans KR", sans-serif;
+    }
     body {
-        line-height: 1;
+        color:${(props) => props.theme.textColor};
+        background-color:${(props) => props.theme.bgColor}
     }
     ol, ul {
         list-style: none;
@@ -44,6 +50,9 @@ const GolbalStyle = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
-`;
+    a{
+        text-decoration:none;
+    }
+`
 
-export default GolbalStyle;
+export default GolbalStyle
