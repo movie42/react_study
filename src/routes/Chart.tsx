@@ -20,7 +20,10 @@ interface IHistricalData {
 function Chart({ coinId }: ChartProps) {
   const { isLoading, data } = useQuery<IHistricalData[]>(
     ['ohlcv', coinId],
-    () => fetchCoinHistory(coinId)
+    () => fetchCoinHistory(coinId),
+    {
+      refetchInterval: 10000,
+    }
   )
   return (
     <div>
@@ -46,9 +49,23 @@ function Chart({ coinId }: ChartProps) {
               background: 'transparent',
             },
             grid: { show: false },
+            fill: {
+              type: 'gradient',
+              gradient: {
+                gradientToColors: ['red'],
+                stops: [0, 100, 100, 100],
+                type: 'vertical',
+              },
+            },
+            colors: ['blue'],
+            tooltip: {
+              y: {
+                formatter: (value) => `$ ${value.toFixed(3)}`,
+              },
+            },
             xaxis: {
-              type: 'category',
-              categories: data?.map((close) => close.time_close.slice(0, 10)),
+              type: 'datetime',
+              categories: data?.map((close) => close.time_close),
               axisBorder: {
                 show: false,
               },
