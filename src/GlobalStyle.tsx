@@ -32,6 +32,7 @@ const GolbalStyle = createGlobalStyle`
         font-family: "Noto Sans KR", sans-serif;
     }
     body {
+        font-size:1.6rem;
         color:${(props) => props.theme.textColor};
         background-color:${(props) => props.theme.bgColor}
     }
