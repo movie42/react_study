@@ -1,19 +1,25 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Coins from "./Coins";
-import Coin from "./Coin";
-function Router() {
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Coins from './Coins'
+import Coin from './Coin'
+
+interface IRouterProps {
+  toggleDark: () => void
+  isDark: boolean
+}
+
+function Router({ toggleDark, isDark }: IRouterProps) {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/:coinId">
-          <Coin />
+          <Coin isDark={isDark} />
         </Route>
         <Route path="/">
-          <Coins />
+          <Coins toggleDark={toggleDark} />
         </Route>
       </Switch>
     </BrowserRouter>
-  );
+  )
 }
 
-export default Router;
+export default Router

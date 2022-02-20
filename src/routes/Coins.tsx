@@ -26,7 +26,7 @@ const Coin = styled.li`
   algin-item: center;
   font-size: 1.6rem;
   background-color: white;
-  color: ${(props) => props.theme.bgColor};
+  color: black;
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 10px;
@@ -57,7 +57,11 @@ interface ICoin {
   type: string
 }
 
-function Coins() {
+interface ICoinsProp {
+  toggleDark: () => void
+}
+
+function Coins({ toggleDark }: ICoinsProp) {
   const { isLoading, data } = useQuery<ICoin[]>('allCoins', fetchCoins)
   return (
     <Container>
@@ -66,6 +70,7 @@ function Coins() {
       </Helmet>
       <Header>
         <Title>코인</Title>
+        <button onClick={toggleDark}>Toggle Mode</button>
       </Header>
       {isLoading ? (
         'Loading'

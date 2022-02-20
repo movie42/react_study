@@ -4,6 +4,7 @@ import ApexChart from 'react-apexcharts'
 
 interface ChartProps {
   coinId: string
+  isDark: boolean
 }
 
 interface IHistricalData {
@@ -17,7 +18,7 @@ interface IHistricalData {
   market_cap: number
 }
 
-function Chart({ coinId }: ChartProps) {
+function Chart({ coinId, isDark }: ChartProps) {
   const { isLoading, data } = useQuery<IHistricalData[]>(
     ['ohlcv', coinId],
     () => fetchCoinHistory(coinId),
@@ -35,7 +36,7 @@ function Chart({ coinId }: ChartProps) {
           series={[{ name: 'Price', data: data?.map((price) => price.close) }]}
           options={{
             theme: {
-              mode: 'dark',
+              mode: isDark ? 'dark' : 'light',
             },
             stroke: {
               curve: 'smooth',

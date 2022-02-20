@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 import {
   useParams,
   Route,
@@ -160,7 +158,11 @@ interface TickersData {
   }
 }
 
-function Coin() {
+interface ICoinProps {
+  isDark: boolean
+}
+
+function Coin({ isDark }: ICoinProps) {
   const { coinId } = useParams<RouteParams>()
   const { state } = useLocation<RouteState>()
   const priceMatch = useRouteMatch('/:coinId/price')
@@ -234,7 +236,7 @@ function Coin() {
               <Price></Price>
             </Route>
             <Route path={`/:coinId/chart`}>
-              <Chart coinId={coinId}></Chart>
+              <Chart isDark={isDark} coinId={coinId}></Chart>
             </Route>
           </Switch>
         </>
