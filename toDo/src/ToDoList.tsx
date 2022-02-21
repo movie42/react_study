@@ -6,17 +6,30 @@ interface IForm {
   last_name: string;
   user_name: string;
   password: string;
-  pssaword_confirm: string;
+  password_confirm: string;
+  extraError?: string;
 }
 
 function ToDoList() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors },
   } = useForm<IForm>();
-  const onValid = (data: any) => {
-    console.log(data);
+  const onValid = (data: IForm) => {
+    if (data.password !== data.password_confirm) {
+      setError(
+        'password_confirm',
+        {
+          message: '앞의 비밀번호와 같아야합니다.',
+        },
+        {
+          shouldFocus: true,
+        }
+      );
+    }
+    // setError('extraError', { message: '서버가 요청을 거부하였습니다.' });
   };
   return (
     <div>
@@ -37,7 +50,17 @@ function ToDoList() {
         />
         <span>{errors?.email?.message}</span>
         <input
-          {...register('first_name', { required: '이름을 입력해주세요.' })}
+          {...register('first_name', {
+            required: '이름을 입력해주세요.',
+            validate: {
+              noJavascript: (value) =>
+                value.includes('javascript')
+                  ? '사용할수 없는 문자입니다.'
+                  : true,
+              noJava: (value) =>
+                value.includes('java') ? '사용할수 없는 문자입니다.' : true,
+            },
+          })}
           type="text"
           placeholder="이름을 입력하세요."
         />
@@ -76,6 +99,7 @@ function ToDoList() {
         />
         <span>{errors?.password_confirm?.message}</span>
         <button>추가하기</button>
+        <span>{errors?.extraError?.message}</span>
       </form>
     </div>
   );
