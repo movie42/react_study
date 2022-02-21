@@ -8,6 +8,16 @@ function ToDo({ text, category, id }: IToDO) {
     const {
       currentTarget: { name },
     } = event;
+
+    setToDos((preValue) => {
+      const targetIndex = preValue.findIndex((toDo) => toDo.id === id);
+      const newValue = { text, id, category: name as any };
+      return [
+        ...preValue.slice(0, targetIndex),
+        newValue,
+        ...preValue.slice(targetIndex + 1),
+      ];
+    });
   };
   return (
     <li>
