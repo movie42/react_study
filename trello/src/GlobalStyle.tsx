@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GolbalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;900&display=swap');
@@ -33,7 +33,7 @@ const GolbalStyle = createGlobalStyle`
     }
     body {
         font-size:1.6rem;
-        color:${(props) => props.theme.textColor};
+        color:black;
         background-color:${(props) => props.theme.bgColor}
     }
     ol, ul {
@@ -55,6 +55,6 @@ const GolbalStyle = createGlobalStyle`
         text-decoration:none;
         color:inherit;
     }
-`
+`;
 
-export default GolbalStyle
+export default GolbalStyle;
