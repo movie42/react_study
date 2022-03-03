@@ -1,4 +1,5 @@
 import { toDoState } from "atoms";
+import DraggableCard from "Components/DragabbleCard";
 import GolbalStyle from "GlobalStyle";
 import {
   DragDropContext,
@@ -33,15 +34,9 @@ const Board = styled.div`
   min-height: 25vh;
 `;
 
-const Card = styled.div`
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding: 1rem 1rem;
-  background-color: ${(props) => props.theme.cardColor};
-`;
-
 function App() {
   const [toDos, setToDos] = useRecoilState(toDoState);
+
   const onDragEnd = ({ draggableId, destination, source }: DropResult) => {
     if (!destination) return;
 
@@ -62,16 +57,7 @@ function App() {
               {(magic) => (
                 <Board ref={magic.innerRef} {...magic.droppableProps}>
                   {toDos.map((toDo, index) => (
-                    <Draggable key={toDo} draggableId={toDo} index={index}>
-                      {(magic) => (
-                        <Card
-                          ref={magic.innerRef}
-                          {...magic.dragHandleProps}
-                          {...magic.draggableProps}>
-                          {toDo}
-                        </Card>
-                      )}
-                    </Draggable>
+                    <DraggableCard key={toDo} toDo={toDo} index={index} />
                   ))}
                   {magic.placeholder}
                 </Board>

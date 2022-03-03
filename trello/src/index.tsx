@@ -1,5 +1,5 @@
-import React from "react";
 import ReactDOM from "react-dom";
+import React from "react";
 import { RecoilRoot } from "recoil";
 import { ThemeProvider } from "styled-components";
 import { theme } from "theme";
