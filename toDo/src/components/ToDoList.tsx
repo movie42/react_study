@@ -10,7 +10,7 @@ function ToDoList() {
   const onInput = (event: FormEvent<HTMLSelectElement>) => {
     setCategory(event.currentTarget.value as any);
   };
-  console.log(toDos);
+
   return (
     <div>
       <h1>오늘의 할 일</h1>
