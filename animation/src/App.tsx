@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -20,6 +21,9 @@ function App() {
   return (
     <Wrapper>
       <Box />
+      <motion.div></motion.div>
     </Wrapper>
   );
 }
+
+export default App;
