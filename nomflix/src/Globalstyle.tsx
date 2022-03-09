@@ -18,7 +18,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -32,7 +31,12 @@ footer, header, hgroup, main, menu, nav, section {
     display: none;
 }
 body {
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
   line-height: 1;
+  font-size: 10px;
+  color:${(props) => props.theme.white.darker};
+  background-color:black;
 }
 menu, ol, ul {
   list-style: none;
@@ -52,13 +56,7 @@ table {
 * {
   box-sizing: border-box;
 }
-body {
-  font-weight: 300;
-  font-family: 'Source Sans Pro', sans-serif;
-  color:black;
-  line-height: 1.2;
 
-}
 a {
   text-decoration:none;
   color:inherit;

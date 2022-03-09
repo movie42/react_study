@@ -74,7 +74,7 @@ const LinkBox = styled.div<{ isActive: boolean }>`
 `
 
 const ToLinkPage = styled(Link)`
-  display: display;
+  display: block;
 `
 
 interface RouteParams {
