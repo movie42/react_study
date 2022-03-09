@@ -89,20 +89,20 @@ const Circle = styled(motion.span)`
 
 const logoVariants = {
   normal: {
-    fillOpacity: 1,
+    fillOpacity: 1
   },
   active: {
     fillOpacity: [0, 1, 0],
     transition: {
-      repeat: 5,
-    },
+      repeat: 5
+    }
   },
-  exit: {},
+  exit: {}
 };
 
 const navVariants = {
   top: { backgroundColor: "rgba(0,0,0,0)" },
-  scroll: { backgroundColor: "rgba(0,0,0,1)", transition: { duration: 0.2 } },
+  scroll: { backgroundColor: "rgba(0,0,0,1)", transition: { duration: 0.2 } }
 };
 
 function Header() {
@@ -115,11 +115,11 @@ function Header() {
   const toggleSearch = () => {
     if (searchOpen) {
       inputAnimation.start({
-        scaleX: 0,
+        scaleX: 0
       });
     } else {
       inputAnimation.start({
-        scaleX: 1,
+        scaleX: 1
       });
     }
     setSearchOpen(!searchOpen);
